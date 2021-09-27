@@ -25,4 +25,7 @@ func main() {
 	fmt.Println("deck to string conversion!")
 	fmt.Println(cards.deckToString())
 
+	fmt.Println("Printing deck of cards to file.")
+	cards.saveDeckToFile("my_whole_deck.txt")
+
 }
