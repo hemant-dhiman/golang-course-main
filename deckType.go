@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 // custom type declaration
@@ -61,8 +62,11 @@ func readDeckFromFile(fileName string) deck {
 }
 
 func (d deck) suffleTheDeck() {
+	source := rand.NewSource(time.Now().UnixNano())
+	r := rand.New(source)
+
 	for i := range d {
-		randomIndex := rand.Intn(len(d) - 1)
+		randomIndex := r.Intn(len(d) - 1)
 
 		d[i], d[randomIndex] = d[randomIndex], d[i]
 	}
