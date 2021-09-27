@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"math/rand"
 	"os"
 	"strings"
 )
@@ -57,4 +58,12 @@ func readDeckFromFile(fileName string) deck {
 	dataFromFile := strings.Split(string(bs), "\n")
 
 	return deck(dataFromFile)
+}
+
+func (d deck) suffleTheDeck() {
+	for i := range d {
+		randomIndex := rand.Intn(len(d) - 1)
+
+		d[i], d[randomIndex] = d[randomIndex], d[i]
+	}
 }

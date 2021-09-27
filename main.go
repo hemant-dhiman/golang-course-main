@@ -32,4 +32,8 @@ func main() {
 	deckFromFile := readDeckFromFile("my_whole_deck.txt")
 
 	deckFromFile.deckPrinter()
+
+	fmt.Println("\nsuffling the deck which was read from file.")
+	deckFromFile.suffleTheDeck()
+	deckFromFile.deckPrinter()
 }
