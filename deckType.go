@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // custom type declaration
 type deck []string
@@ -31,4 +34,8 @@ func (d deck) deckPrinter() {
 // creating a function which return a specific deck within a given range
 func deal(d deck, _range int) (deck, deck) {
 	return d[:_range], d[_range:]
+}
+
+func (d deck) deckToString() string {
+	return strings.Join(d, ",")
 }

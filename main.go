@@ -21,4 +21,8 @@ func main() {
 
 	// fmt.Println("actual deck")
 	// cards.deckPrinter()
+
+	fmt.Println("deck to string conversion!")
+	fmt.Println(cards.deckToString())
+
 }
