@@ -1,0 +1,21 @@
+spades of ace
+spades of two
+spades of three
+spades of four
+spades of five
+diamonds of ace
+diamonds of two
+diamonds of three
+diamonds of four
+diamonds of five
+hearts of ace
+hearts of two
+hearts of three
+hearts of four
+hearts of five
+clubs of ace
+clubs of two
+clubs of three
+clubs of four
+clubs of five
+custom added card Joker
