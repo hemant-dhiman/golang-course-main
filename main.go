@@ -22,10 +22,14 @@ func main() {
 	// fmt.Println("actual deck")
 	// cards.deckPrinter()
 
-	fmt.Println("deck to string conversion!")
+	fmt.Println("\ndeck to string conversion!")
 	fmt.Println(cards.deckToString())
 
-	fmt.Println("Printing deck of cards to file.")
+	fmt.Println("\nsaving deck of cards to file... 100%")
 	cards.saveDeckToFile("my_whole_deck.txt")
 
+	fmt.Println("\nReading a deck from file... 100%")
+	deckFromFile := readDeckFromFile("my_whole_deck.txt")
+
+	deckFromFile.deckPrinter()
 }
