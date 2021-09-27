@@ -1,12 +1,8 @@
 package main
 
-import "fmt"
-
 func main() {
-	cards := deck{"A", "B", "C", "D"}
-	cards = append(cards, "E")
+	cards := newDeck()
+	cards = append(cards, "custom added card Joker")
 
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
+	cards.deckPrinter()
 }
