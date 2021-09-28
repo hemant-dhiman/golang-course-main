@@ -21,7 +21,7 @@ func newDeck() deck {
 
 	for _, cardN := range cardName {
 		for _, cardV := range cardValue {
-			cards = append(cards, cardN+" of "+cardV)
+			cards = append(cards, cardV+" of "+cardN)
 		}
 	}
 
