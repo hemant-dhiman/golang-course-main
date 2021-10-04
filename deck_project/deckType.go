@@ -3,8 +3,10 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 // custom type declaration
@@ -19,7 +21,7 @@ func newDeck() deck {
 
 	for _, cardN := range cardName {
 		for _, cardV := range cardValue {
-			cards = append(cards, cardN+" of "+cardV)
+			cards = append(cards, cardV+" of "+cardN)
 		}
 	}
 
@@ -57,4 +59,15 @@ func readDeckFromFile(fileName string) deck {
 	dataFromFile := strings.Split(string(bs), "\n")
 
 	return deck(dataFromFile)
+}
+
+func (d deck) suffleTheDeck() {
+	source := rand.NewSource(time.Now().UnixNano())
+	r := rand.New(source)
+
+	for i := range d {
+		randomIndex := r.Intn(len(d) - 1)
+
+		d[i], d[randomIndex] = d[randomIndex], d[i]
+	}
 }
